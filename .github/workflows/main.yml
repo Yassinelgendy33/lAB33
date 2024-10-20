@@ -1,0 +1,17 @@
+name: python CI/CD
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+     -name:checkout code 
+      uses:actions/checkout@v3
+     -name: set up Python
+      uses: actions/setup-python@v3
+      with: 
+        pyhon-version: "3.x"
+     - name: Run Python script
+       run: python hello.py
+     
