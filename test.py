@@ -1,22 +1,14 @@
-
 import unittest
-from .py import .py
+from add import Cal
 
-class TestAddFunction(unittest.TestCase):
-def test_add_integers(self):
-        self.assertEqual(add(1, 2), 3)
-    
-    def test_add_floats(self):
-        self.assertEqual(add(1.5, 2.5), 4.0)
-    
-    def test_add_negative_numbers(self):
-        self.assertEqual(add(-1, -2), -3)
-    
-    def test_add_mixed_numbers(self):
-        self.assertEqual(add(-1, 2), 1)
-    
-    def test_add_zero(self):
-        self.assertEqual(add(0, 5), 5)
+class TestCalculator(unittest.TestCase):
 
-if __name__ == '__main__':
-    unittest.main()
+    def test_add(self):
+        result = Cal.add(3, 7)
+        self.assertEqual(result, 10)
+        
+        result = Cal.add(-1, 1)
+        self.assertEqual(result, 0)
+        
+        result = Cal.add(-1, -1)
+        self.assertEqual(result, -2)
