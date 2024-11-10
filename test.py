@@ -1,7 +1,7 @@
 import unittest
 from calc import cal
 
-class TestCalculator(unittest.TestCase):
+class TestCalc(unittest.TestCase):
 
     def test_add(self):
         result = Cal.add(3, 7)
